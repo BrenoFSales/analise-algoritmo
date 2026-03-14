@@ -14,18 +14,19 @@ def merge(A,p,q,r):
     for j in range(_temp):
         _r[j] = A[q + j]
     
-    l.append(0.1)
-    _r.append(0.1)
+    l.append(10**13) # coringa, realmente necessario?
+    _r.append(10**13) # coringa2, realmente necessario?
     i = 0
     j = 0
     for k in range(r):
-        if l[i] <= _r[j]:
+        if l[i] < _r[j]:
             A[k] = l[i]
             i += 1
-        else:
+        elif _r[j] > l[i]:
             A[k] = _r[j]
             j += 1
-    return A
+        else: 
+            return A
 
 def merge_sort(A,p,r):
     p += 1
@@ -36,12 +37,11 @@ def merge_sort(A,p,r):
        merge(A, p, q, r)
     return A
 
-def main():
-    A = [6,2,1,4,5,8,7,9,10, 3]
+def main(A):
+    print('initiating with sample array: ', A)
     A = merge_sort(A, 0, len(A))
-    print(A)
-    
+    print('ended result: ', A)
+
 if __name__ == '__main__':
-    print('initiating . . .')
-    main()
-    print('ended.')
+    A = [6,2,1,4,5,8,7,9,10, 3]
+    main(A)
