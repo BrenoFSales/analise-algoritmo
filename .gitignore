@@ -1,0 +1,43 @@
+# Byte-code files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment
+.venv/
+env/
+venv/
+# other environment folder names
+*.egg
+*.whl
+
+# Miscellaneous
+# OS generated files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Editor/IDE files
+.vscode/ # VS Code settings
+.idea/ # PyCharm/IntelliJ settings
+*.swp    # Vim swap files
+
+# Specific directories for build/distribution
+dist/
+build/
+*.spec
+
+# Logs and databases
+*.log
+*.sqlite3
+db.sqlite3
+
+# Environment variables (sensitive data)
+.env
+.flaskenv
+
+# Notebook checkpoint files
+.ipynb_checkpoints/
+
