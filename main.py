@@ -16,17 +16,18 @@ def merge(A,p,q,r):
     for j in range(_temp):
         _r[j] = A[q + j]
     
-    l.append(10**10)
-    _r.append(10**10)
+    joker = (len(A) + 2)**11 # joker card
+    l.append(joker)
+    _r.append(joker)
     _i = 1
     _j = 1
-    for k in range(r):
+    for k in range(r):   
         if l[_i] < _r[_j]:
             A[k] = l[_i]
             _i += 1
         elif _r[_j] > l[_i]:
             A[k] = _r[_j]
-            _j += 1
+            _j += 1  
 
 def merge_sort(A,p,r):
     if p < r:
